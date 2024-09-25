@@ -1,0 +1,151 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  color: black;
+  padding: 2%;
+  box-sizing: border-box;
+  row-gap: 1%;
+}
+
+.App > div {
+  width: 100%;
+  flex-grow: 1;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App div.HeaderContainer2 {
+  display: none;
+}
+
+.App div.GlobalContainer2 {
+  display: none;
+}
+
+.App div.topContainer {
+  display: flex;
+  justify-content: space-evenly;
+  border: 0px;
+  column-gap: 2%;
+  flex-grow: 1;
+}
+
+.App div.topContainer > div {
+  border: 1px solid black;
+  height: 100%;
+}
+
+.App div.topContainer div:nth-of-type(1) {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  align-items: center;
+}
+
+.App div.topContainer div:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: center;
+}
+
+.App div.AdsContainer {
+  display: none;
+}
+
+.App div.MainContainer {
+  flex-grow: 5;
+}
+
+.App div.AdsContainer2 {
+  display: flex;
+}
+
+@media screen and (min-width: 431px) {
+  .App {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas:
+      "Header Header Header Header"
+      "Header Header Header Header"
+      "GlobalMenu GlobalMenu GlobalMenu Ads"
+      "Context Main Main Ads"
+      "Context Main Main Ads"
+      "Context Main Main Ads"
+      "Context Main Main Ads"
+      "Context Main Main Ads"
+      "Footer Footer Footer Footer";
+    gap: 1%;
+    padding: 1%;
+    background-color: white;
+    color: black;
+    align-content: stretch;
+    align-items: normal;
+  }
+
+  .App div.topContainer {
+    display: none;
+  }
+
+  .App > div {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .App div.HeaderContainer2 {
+    grid-area: Header;
+    display: flex;
+  }
+
+  .App div.GlobalContainer2 {
+    display: flex;
+    grid-area: GlobalMenu;
+  }
+
+  .App div.ContextContainer {
+    grid-area: Context;
+  }
+
+  .App div.MainContainer {
+    grid-area: Main;
+  }
+
+  .App div.FooterContainer {
+    grid-area: Footer;
+  }
+
+  .App div.AdsContainer2 {
+    display: none;
+  }
+
+  .App div.AdsContainer {
+    grid-area: Ads;
+    display: flex;
+  }
+}
