@@ -77,6 +77,22 @@ body {
   display: flex;
 }
 
+.listContainer {
+  display: none;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.listContainer ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  list-style-type: none;
+  align-items: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
 @media screen and (min-width: 431px) {
   .App {
     font-family: sans-serif;
@@ -147,5 +163,9 @@ body {
   .App div.AdsContainer {
     grid-area: Ads;
     display: flex;
+  }
+
+  .listContainer {
+    display: none;
   }
 }
